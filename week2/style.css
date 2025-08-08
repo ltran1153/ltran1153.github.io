@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+AU+NSW:wght@100..400&display=swap");
+.blue {
+  color: red;
+}
+body {
+  font-family: "Playwrite AU NSW", cursive;
+  text-align: center;
+}
+/*style attribute 1000 > ID 100 > Class Psuedo-class/ attribute 10 > elements 1*/
+p {
+  color: blue;
+}
+/* This is a comment */
+/* css prioritizes final command when commands conflict */
+.bold {
+  font-weight: bold;
+}
+
+#infopara li {
+  border: 1rem solid red;
+}
+
+section {
+  text-align: right;
+  border: 0.5rem salmon;
+}
+h1 {
+  color: blue;
+  font-size: 3rem;
+  font-family: "PT Serif", serif;
+  background-color: blanchedalmond;
+}
+li {
+  background-color: brown;
+}
