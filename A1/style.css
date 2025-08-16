@@ -1,66 +1,182 @@
 body {
-  background-color: aquamarine;
-
-  padding: 1rem;
+  background-color: rgb(82, 79, 79);
   text-align: center;
+  color: whitesmoke;
+}
+a {
+  color: whitesmoke;
+}
+p {
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 300%;
 }
 h1 {
-  background-color: blueviolet;
+  color: black;
+  padding-left: 13%;
+  padding-top: 6%;
+}
+h4 {
+  color: black;
+  padding-left: 13%;
+  width: 30%;
+}
+#kim {
+  padding-right: 13%;
+  float: right;
+  height: 100%;
+  position: relative;
+  top: -74%;
+  object-fit: cover;
+  vertical-align: bottom;
 }
 .questions {
-  column-count: 2;
   text-align: left;
-  padding-left: 3cm;
+  width: 90%;
+  margin: auto;
+  display: flex;
 }
-.div1 {
+#list {
+  flex: 50%;
+}
+#div0 {
   width: 100vw;
   height: 100vh;
 }
-.div2 {
+#div1 {
+  color: rgb(154, 154, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.div3 {
+#div2 {
+  color: rgb(255, 52, 52);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.div4 {
+#div3 {
+  color: rgb(191, 255, 64);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.div5 {
+#div4 {
+  color: rgb(255, 147, 210);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.div6 {
+#div5 {
+  color: chartreuse;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.div7 {
+#div6 {
+  color: cyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.div8 {
+#div7 {
+  color: goldenrod;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.div9 {
+#div8 {
+  color: lemonchiffon;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.div10 {
+#div9 {
+  color: rgb(252, 113, 233);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.div11 {
+#div10 {
+  color: lime;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.div12 {
+#div11 {
+  color: tomato;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.div13 {
+#div12 {
+  color: rgb(151, 209, 51);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
+}
+#div13 {
+  color: rgb(208, 78, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.return2 {
+  padding-left: 0%;
+  padding-right: 0%;
+  position: fixed;
+  top: 90%;
+  right: 90%;
+  font-size: medium;
+}
+li {
+  margin-top: 2%;
+}
+h3 {
+  font-size: 150%;
+}
+#title {
+  text-align: left;
+  width: 100vw;
+  height: 40vh;
+  background-color: rgb(198, 198, 198);
 }

@@ -33,3 +33,16 @@ h1 {
 li {
   background-color: brown;
 }
+#infopara {
+  padding: 3rem 5rem;
+  width: 50%;
+  margin: auto;
+  border: 3rem solid yellow;
+}
+.list2 {
+  display: flex;
+  flex-direction: row;
+  list-style-type: disc;
+  justify-content: center;
+  
+}
