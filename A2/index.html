@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <script src="main.js" defer></script>
+    <script src="image.js" defer></script>
+
+    <title>Interactive Media Player</title>
+  </head>
+  <body>
+    <!--#layout is so I can spread horizontally my two primary components. The sidebar, and Media Controller. The visual elements in this html are all layed out in the order that they will appear on the site-->
+    <div id="layout">
+      <audio id="audiocontrols" controls>
+        <!--This will be my audio element-->
+        <source
+          id="audiosource"
+          src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Hes.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+      <!--This will be my video background. I am using a video background because I think it brings interesting visual design to my audio player -->
+      <video id="background" autoplay loop muted controls>
+        <!--video background will constantly run-->
+        <source
+          src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <!--These buttons will allow you to pick a song of choice directly. This is important since many people will want to choose a song they like. This is one of my main extra interactions-->
+      <nav id="sidebar">
+        <button id="audio1">Hes</button>
+        <button id="audio2">Dry Down, feat. Ben Snaath</button>
+        <button id="audio3">Leapt</button>
+        <button id="audio4">Water Feature</button>
+      </nav>
+
+      <!--This media container will hold my song covers and media controller. They are layed out next to the sidebar, vertically-->
+      <div id="mediacontainer">
+        <!--This will be my image element that accompanies my audio element. I converted the images into mp4 format because it is required for the scripts I intend to write for it-->
+        <div id="imagecontainer">
+          <video id="image" controls muted>
+            <source id="imagesource" src="assets/Cover1.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <!--I divided the controller into 2 parts for layout. The top will contain song time and progress, the bottom will contain buttons to control the song-->
+        <div id="controller">
+          <div id="controllertop">
+            <span id="currenttime">0:00</span>
+            <!--This will show the song's current time-->
+            <progress id="timeprogress"></progress>
+            <!--This will show the song's completion percentage in the form of a progress bar-->
+            <span id="totaltime">0:00</span>
+            <!--This will show the song's total time-->
+          </div>
+          <div id="controllerbot">
+            <button id="volume">
+              <!--This will just be an icon. The volume is controlled by a slider-->
+              <img id="volume1" src="assets/volume.png" alt="volume" />
+            </button>
+            <!--This will be the slider that lets me control my media player's volume output-->
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              name="volumeslider"
+              id="volumeslider"
+            />
+            <!--This button should have randomized song order-->
+            <button id="shuffle">
+              <img id="shuffle1" src="assets/shuffle.png" alt="shuffle" />
+            </button>
+            <!--This button will bring you to the start of the song-->
+            <button id="skipstart">
+              <img id="skipstart1" src="assets/skipstart.png" alt="skipstart" />
+            </button>
+            <!--This button will let you start and stop the song at the time it was pressed-->
+            <button id="play">
+              <img id="play1" src="assets/play.png" alt="play" />
+            </button>
+            <!--This button will bring you to the end of a song, essentially allowing you to skip it-->
+            <button id="skipend">
+              <img id="skipend1" src="assets/skipend.png" alt="skipend" />
+            </button>
+            <!--This button will make a song play again from the start, once it has ended.-->
+            <button id="loop">
+              <img id="loop1" src="assets/loop.png" alt="loop" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <p>Icons by <a href="https://icons8.com/">Icons8</a></p>
+    <p>Covers Generated using <a href="https://openai.com/">Open AI</a></p>
+  </footer>
+</html>

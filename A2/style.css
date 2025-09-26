@@ -1,0 +1,268 @@
+/* The style I have chosen for my media player is a luxry, themed, white and gold colour design. This design stands out from the dark colored, techy/ modern styled design of many audio players*/
+/* The color scheme that I chose for this design is white and gold-gradient. Icons and text are black for better visual clarity.
+This color scheme is chosen because classic luxury color scheme is oftent gold accompanied with white or black*/
+
+/* This font fits with the classic luxry theme of my design */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Elsie:wght@400;900&display=swap");
+
+/*I want my media player to all fit on 1 screen, without the need for scrolling*/
+#layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+#sidebar {
+  /* my sidebar buttons will spread fill 10% of the screen*/
+  display: flex;
+  justify-content: space-evenly;
+  width: 10%;
+  background-image: linear-gradient(
+    /*gradient of sidebar will be brighter than media controller, to create depth*/
+      to left,
+    rgb(248, 255, 206),
+    rgb(245, 255, 130)
+  );
+  flex-direction: column;
+  height: 100vh;
+  font-family: Cormorant;
+}
+
+#mediacontainer {
+  width: 90%;
+}
+/* This centers my song images right at the center of image container*/
+#imagecontainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+#timeprogress {
+  width: 900px;
+  -webkit-appearance: none; /*This is to get rid of default browser controls*/
+  -moz-appearance: none; /*This is to get rid of default browser controls*/
+  appearance: none; /*This is to get rid of default browser controls*/
+}
+/* This lets me style progress bar to be filled*/
+#timeprogress::-webkit-progress-bar {
+  background-color: rgba(0, 0, 0, 0.503);
+  border-radius: 5px;
+}
+/* this lets me style progress bar currently filled*/
+#timeprogress::-webkit-progress-value {
+  background-color: white;
+  border-radius: 5px;
+}
+/*This is styling the layout of song time and progress*/
+#controllertop {
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 10vh;
+  color: black;
+  font-family: Cormorant;
+  font-size: 20px;
+}
+/*This is styling the layout of controller buttons*/
+#controllerbot {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 10vh;
+  gap: 40px;
+  padding-bottom: 20px;
+}
+
+/*song image size*/
+#image {
+  height: 500px;
+  width: 500px;
+}
+/*gradient added here so that it runs from controller top to controller bottom instead of having 2 separate gradients
+Controller gradient is darker than sidebar gradient to make it look underneath sidebar*/
+#controller {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(234, 255, 214),
+    rgb(238, 251, 205)
+  );
+}
+/* volume icon does not have a mirror, and I want play button to be right at the center. I put volume far to the side and separated it from the rest of the button layout*/
+/* The button colors are all the same. The button sizes create hierachy, by getting smaller the further away from center.*/
+#volume {
+  position: absolute;
+  right: 1100px;
+  bottom: 20px;
+  background-color: white;
+  border-radius: 20%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline-color: rgb(255, 255, 175);
+}
+#shuffle {
+  background-color: white;
+  border-radius: 20%;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: rgb(255, 255, 204);
+  outline-color: rgb(255, 255, 175);
+}
+
+#skipstart {
+  border-radius: 20%;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: rgb(255, 255, 204);
+  outline-color: rgb(255, 255, 175);
+}
+/* Play button will be a main focal point for this media player, being the largest, having unique border, and positioned closest to the center of controller*/
+#play {
+  background-color: white;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 5px;
+  border-color: rgb(255, 255, 204);
+  outline-color: rgb(255, 255, 175);
+}
+
+#skipend {
+  border-radius: 20%;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: rgb(255, 255, 204);
+  outline-color: rgb(255, 255, 175);
+}
+
+#loop {
+  background-color: white;
+  border-radius: 20%;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: rgb(255, 255, 204);
+  outline-color: rgb(255, 255, 175);
+}
+#play1 {
+  height: 60px;
+  width: 60px;
+}
+
+#loop1 {
+  height: 40px;
+  width: 40px;
+}
+
+#shuffle1 {
+  height: 40px;
+  width: 40px;
+}
+
+#skipstart1 {
+  height: 50px;
+  width: 50px;
+}
+#skipend1 {
+  height: 50px;
+  width: 50px;
+}
+
+#volume1 {
+  position: relative;
+  left: 10px;
+}
+/* volume slider is positioned to be right next to volume icon*/
+#volumeslider {
+  position: absolute;
+  left: 420px;
+  height: 10px;
+  rotate: -90deg; /* This makes the slider sit vertically. I did this because horizontal slider was visually clunky*/
+  width: 80px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 20px;
+  background-color: rgba(71, 75, 63, 0.499);
+  cursor: pointer; /* slider can be thin, this lets the user know  if their mouse is on the slider or not*/
+}
+/* This changes the appearance of slider thumb*/
+#volumeslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: rgb(184, 186, 132);
+}
+/* audio buttons are set to 24.5 to leave gaps between them. This separates the button and creates depth, to make it look more like mechanical buttons*/
+#audio1 {
+  height: 24.5%;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+#audio2 {
+  height: 24.5%;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+#audio3 {
+  height: 24.5%;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+#audio4 {
+  height: 24.5%;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+
+#background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* This lets the background video cover the entire screen*/
+  z-index: -1; /*This puts the background video behind all other html elements*/
+}
+
+#layout {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.541
+  ); /* filter for background video, this makes it match more with media player color scheme*/
+}
+/* footer text is same as media player theme, but used different background color to show that it is not part of the website experience*/
+footer {
+  font-family: Cormorant;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.551);
+  color: white;
+}
+
+a {
+  color: rgb(255, 255, 169);
+}
