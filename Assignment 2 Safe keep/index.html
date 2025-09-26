@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <script src="main.js" defer></script>
+   
+    <title>Interactive Media Player</title>
+  </head>
+  <body>
+    <div id="layout">
+      <audio id="audiocontrols" controls>
+        <source id="audiosource" src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Hes.mp3" type="audio/mpeg">
+      </audio>
+      <video id="background" autoplay loop muted controls>
+        <source
+          src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <nav id="sidebar">
+        <button id="audio1">Hes</button>
+        <button id="audio2">Dry Down, feat. Ben Snaath</button>
+        <button id="audio3">Leapt</button>
+        <button id="audio4">Water Feature</button>
+      </nav>
+      <div id="mediacontainer">
+        <div id="imagecontainer">
+          <video id="image" controls autoplay muted="true">
+            <source id="imagesource" src="assets/Cover1.mp4" type="video/mp4" />
+          </video>
+          <p id="songname">Hes</p>
+        </div>
+        <div id="controller">
+          <div id="controllertop">
+            <span id="currenttime">0:00</span>
+            <progress id="timeprogress"></progress>
+            <span id="totaltime">0:00</span>
+          </div>
+          <div id="controllerbot">
+            <button id="volume">
+              <img id="volume1" src="assets/volume.png" alt="volume" />
+            </button>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              name="volumeslider"
+              id="volumeslider"
+            />
+            <button id="shuffle">
+              <img id="shuffle1" src="assets/shuffle.png" alt="shuffle" />
+            </button>
+            <button id="skipstart">
+              <img id="skipstart1" src="assets/skipstart.png" alt="skipstart" />
+            </button>
+            <button id="play">
+              <img id="play1" src="assets/play.png" alt="play" />
+            </button>
+            <button id="skipend">
+              <img id="skipend1" src="assets/skipend.png" alt="skipend" />
+            </button>
+            <button id="loop">
+              <img id="loop1" src="assets/loop.png" alt="loop" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
