@@ -1,6 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Butcherman&display=swap");
 #Character {
-  margin: auto;
+  position: absolute;
+  bottom: 0%;
+  left: 30%;
   display: block;
-  width: 50%;
-  margin-bottom: 0px;
+  width: 40%;
+}
+
+body {
+  background-color: #3a1f42;
+}
+
+#Hover1 {
+  position: absolute;
+  left: 35.5%;
+  bottom: 0%;
+  background-color: rgba(255, 166, 0, 0);
+  width: 15rem;
+  height: 29.5rem;
+  z-index: 2;
+}
+
+#Ghost {
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  bottom: 30%;
+  left: 3%;
+  animation-name: Ghost;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  z-index: 2;
+  opacity: 0;
+}
+
+@keyframes Ghost {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  50% {
+    transform: translateX(15rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#Bat {
+  position: absolute;
+  top: -5rem;
+  left: 5%;
+  width: 30rem;
+  height: 30rem;
+  z-index: -1;
+  transform: rotate(50deg);
+}
+
+#Hover2 {
+  position: absolute;
+  width: 5rem;
+  height: 9.2rem;
+  z-index: 2;
+  left: 17.5rem;
+  top: 3.5rem;
+  background-color: rgba(255, 166, 0, 0.315);
+  transform: rotate(50deg);
+}
+
+#Grave {
+  position: absolute;
+  bottom: 0%;
+  left: 4rem;
+  width: 30rem;
+  height: 25rem;
+}
+
+#Grave2 {
+  position: absolute;
+  bottom: 0%;
+  right: 4rem;
+  width: 30rem;
+  height: 25rem;
+  transform: rotateY(180deg);
+}
+
+#Ghost2 {
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  bottom: 30%;
+  right: 3%;
+  animation-name: Ghost2;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  z-index: 2;
+  opacity: 0;
+}
+
+@keyframes Ghost2 {
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  50% {
+    transform: translateX(-15rem) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(0) rotateY(180deg);
+  }
+}
+
+#Hover3 {
+  position: absolute;
+  width: 25rem;
+  height: 11rem;
+  z-index: 2;
+  left: 6.5rem;
+  bottom: 0rem;
+  background-color: rgba(255, 166, 0, 0.204);
+}
+#Hover3:hover ~ #Ghost {
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+
+#Hover4 {
+  position: absolute;
+  width: 25rem;
+  height: 11rem;
+  z-index: 2;
+  right: 6.5rem;
+  bottom: 0rem;
+  background-color: rgba(255, 166, 0, 0.204);
+}
+
+#Hover4:hover ~ #Ghost2 {
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+h1 {
+  position: absolute;
+  font-size: 5rem;
+  z-index: 2;
+  right: 37rem;
+  top: 7rem;
+  font-family: Butcherman;
+  transform: rotate(35deg);
+}
+h2 {
+  position: absolute;
+  font-size: 5rem;
+  z-index: 2;
+  left: 20rem;
+  bottom: 12rem;
+  font-family: Butcherman;
+  transform: rotate(-80deg);
+}
+
+#Pumpkin {
+  position: absolute;
+  bottom: 0%;
+  left: -13rem;
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(90deg);
+  animation-name: Pumpkin;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+@keyframes Pumpkin {
+  0.1% {
+    transform: translate(38rem, -30rem) rotate(0deg);
+  }
+  100% {
+    transform: translate(38rem, -30rem) rotate(360deg);
+  }
+}
+
+#Pumpkin2 {
+  position: absolute;
+  bottom: 10rem;
+  right: -13rem;
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(-90deg);
+}
+
+body {
+  overflow: hidden;
+}
+
+#Bat2 {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  width: 30rem;
+  height: 30rem;
+  z-index: -2;
+  transform: rotate(-20deg);
+}
+#Hover5 {
+  position: absolute;
+  width: 5rem;
+  height: 9.2rem;
+  z-index: 2;
+  right: 16rem;
+  top: 12.5rem;
+  background-color: rgba(255, 166, 0, 0.319);
+  transform: rotate(-20deg);
+}
+
+#Hover6 {
+  height: 4.5rem;
+  width: 17rem;
+  position: absolute;
+  z-index: 3;
+  right: 37rem;
+  top: 13rem;
+  transform: rotate(35deg);
+  background-color: rgba(255, 166, 0, 0.436);
+}
+
+#Hover7 {
+  position: absolute;
+  height: 4.5rem;
+  width: 17rem;
+  z-index: 3;
+  left: 19.9rem;
+  bottom: 18.7rem;
+  transform: rotate(-80deg);
+  background-color: rgba(255, 166, 0, 0.407);
+}
+
+#Hover8 {
+  position: absolute;
+  height: 9rem;
+  width: 2rem;
+  z-index: 3;
+  left: 0rem;
+  bottom: 4.9rem;
+  background-color: rgba(255, 166, 0, 0.407);
+}
+#Hover9 {
+  position: absolute;
+  height: 9rem;
+  width: 2rem;
+  z-index: 3;
+  right: 0rem;
+  bottom: 16.1rem;
+  background-color: rgba(255, 166, 0, 0.407);
+}
+#Moon {
+  position: absolute;
+  top: -1rem;
+  right: 25rem;
+  z-index: 4;
+  height: 20rem;
+  width: 20rem;
+}
+
+#Hover10 {
+  position: absolute;
+  top: 1.6rem;
+  right: 30.4rem;
+  z-index: 5;
+  height: 11.1rem;
+  width: 11.1rem;
+  background-color: rgba(255, 166, 0, 0.527);
+  border-radius: 50%;
+}
+
+#Hover8:hover ~ #Pumpkin {
+  animation-play-state: running;
 }
