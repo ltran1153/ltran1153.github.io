@@ -20,6 +20,7 @@ const ghostsong = document.querySelector("#Ghostsong");
 const pumpkinsong = document.querySelector("#Pumpkinsong");
 const spookysong = document.querySelector("#Spookysong");
 const hover10 = document.querySelector("#Hover10");
+const Start = document.querySelector("#start");
 
 ghostsong.removeAttribute("controls");
 charactersong.removeAttribute("controls");
@@ -27,6 +28,10 @@ batsong.removeAttribute("controls");
 spookysong.removeAttribute("controls");
 pumpkinsong.removeAttribute("controls");
 
+function RemoveStart() {
+  Start.remove();
+}
+Start.addEventListener("click", RemoveStart);
 function CharacterPlay() {
   character.play();
   charactersong.load();
