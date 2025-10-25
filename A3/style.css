@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Butcherman&display=swap");
 #Character {
-  position: absolute;
+  position: fixed;
   bottom: 0%;
   left: 30%;
   display: block;
@@ -12,7 +12,7 @@ body {
 }
 
 #Hover1 {
-  position: absolute;
+  position: fixed;
   left: 35.5%;
   bottom: 0%;
   background-color: rgba(255, 166, 0, 0);
@@ -24,7 +24,7 @@ body {
 #Ghost {
   width: 15rem;
   height: 15rem;
-  position: absolute;
+  position: fixed;
   bottom: 30%;
   left: 3%;
   animation-name: Ghost;
@@ -46,17 +46,32 @@ body {
   }
 }
 #Bat {
-  position: absolute;
+  position: fixed;
   top: -5rem;
   left: 5%;
   width: 30rem;
   height: 30rem;
   z-index: -1;
   transform: rotate(50deg);
+  animation-name: Bat;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+@keyframes Bat {
+  0.01% {
+    transform: scale(1) rotate(50deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(50deg);
+  }
+  100% {
+    transform: scale(1) rotate(50deg);
+  }
 }
 
 #Hover2 {
-  position: absolute;
+  position: fixed;
   width: 5rem;
   height: 9.2rem;
   z-index: 2;
@@ -67,7 +82,7 @@ body {
 }
 
 #Grave {
-  position: absolute;
+  position: fixed;
   bottom: 0%;
   left: 4rem;
   width: 30rem;
@@ -75,7 +90,7 @@ body {
 }
 
 #Grave2 {
-  position: absolute;
+  position: fixed;
   bottom: 0%;
   right: 4rem;
   width: 30rem;
@@ -86,7 +101,7 @@ body {
 #Ghost2 {
   width: 15rem;
   height: 15rem;
-  position: absolute;
+  position: fixed;
   bottom: 30%;
   right: 3%;
   animation-name: Ghost2;
@@ -109,7 +124,7 @@ body {
 }
 
 #Hover3 {
-  position: absolute;
+  position: fixed;
   width: 25rem;
   height: 11rem;
   z-index: 2;
@@ -121,9 +136,13 @@ body {
   opacity: 1;
   transition: 0.4s ease-in-out;
 }
+#Hover10:hover ~ #Ghost {
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
 
 #Hover4 {
-  position: absolute;
+  position: fixed;
   width: 25rem;
   height: 11rem;
   z-index: 2;
@@ -136,53 +155,111 @@ body {
   opacity: 1;
   transition: 0.4s ease-in-out;
 }
+#Hover10:hover ~ #Ghost2 {
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
 h1 {
-  position: absolute;
+  position: fixed;
   font-size: 5rem;
   z-index: 2;
   right: 37rem;
   top: 7rem;
   font-family: Butcherman;
   transform: rotate(35deg);
+  color: orange;
+  text-shadow: -0.5rem -0.5rem 0 #000, 0.5rem -0.5rem 0 #000,
+    -0.5rem 0.5rem 0 #000, 0.5rem 0.5rem 0 #000;
+  animation-name: h1;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+@keyframes h1 {
+  0.1% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(25deg);
+  }
 }
 h2 {
-  position: absolute;
+  position: fixed;
   font-size: 5rem;
   z-index: 2;
   left: 20rem;
   bottom: 12rem;
   font-family: Butcherman;
   transform: rotate(-80deg);
+  color: orange;
+  text-shadow: -0.5rem -0.5rem 0 #000, 0.5rem -0.5rem 0 #000,
+    -0.5rem 0.5rem 0 #000, 0.5rem 0.5rem 0 #000;
+  animation-name: h2;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+@keyframes h2 {
+  0.1% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(-70deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
 }
 
 #Pumpkin {
-  position: absolute;
+  position: fixed;
   bottom: 0%;
   left: -13rem;
   width: 20rem;
   height: 20rem;
   transform: rotate(90deg);
   animation-name: Pumpkin;
-  animation-duration: 0.8s;
+  animation-duration: 0.4s;
   animation-iteration-count: infinite;
   animation-play-state: paused;
 }
 @keyframes Pumpkin {
   0.1% {
-    transform: translate(38rem, -30rem) rotate(0deg);
+    transform: translate(38rem, -30rem) rotate(-30deg);
+  }
+  50% {
+    transform: translate(38rem, -30rem) rotate(30deg);
   }
   100% {
-    transform: translate(38rem, -30rem) rotate(360deg);
+    transform: translate(38rem, -30rem) rotate(-30deg);
   }
 }
 
 #Pumpkin2 {
-  position: absolute;
+  position: fixed;
   bottom: 10rem;
   right: -13rem;
   width: 20rem;
   height: 20rem;
   transform: rotate(-90deg);
+  animation-name: Pumpkin2;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+@keyframes Pumpkin2 {
+  0.01% {
+    transform: translate(-38rem, -15rem) rotate(0);
+  }
+  50% {
+    transform: translate(-38rem, -20rem) rotate(0);
+  }
+  100% {
+    transform: translate(-38rem, -15rem) rotate(0);
+  }
 }
 
 body {
@@ -190,16 +267,32 @@ body {
 }
 
 #Bat2 {
-  position: absolute;
+  position: fixed;
   top: 3rem;
   right: 2rem;
   width: 30rem;
   height: 30rem;
   z-index: -2;
   transform: rotate(-20deg);
+  animation-name: Bat2;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
 }
+@keyframes Bat2 {
+  0.01% {
+    transform: scale(1) rotate(-20deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-20deg);
+  }
+  100% {
+    transform: scale(1) rotate(-20deg);
+  }
+}
+
 #Hover5 {
-  position: absolute;
+  position: fixed;
   width: 5rem;
   height: 9.2rem;
   z-index: 2;
@@ -212,7 +305,7 @@ body {
 #Hover6 {
   height: 4.5rem;
   width: 17rem;
-  position: absolute;
+  position: fixed;
   z-index: 3;
   right: 37rem;
   top: 13rem;
@@ -221,7 +314,7 @@ body {
 }
 
 #Hover7 {
-  position: absolute;
+  position: fixed;
   height: 4.5rem;
   width: 17rem;
   z-index: 3;
@@ -232,7 +325,7 @@ body {
 }
 
 #Hover8 {
-  position: absolute;
+  position: fixed;
   height: 9rem;
   width: 2rem;
   z-index: 3;
@@ -241,7 +334,7 @@ body {
   background-color: rgba(255, 166, 0, 0.407);
 }
 #Hover9 {
-  position: absolute;
+  position: fixed;
   height: 9rem;
   width: 2rem;
   z-index: 3;
@@ -250,18 +343,18 @@ body {
   background-color: rgba(255, 166, 0, 0.407);
 }
 #Moon {
-  position: absolute;
+  position: fixed;
   top: -1rem;
-  right: 25rem;
+  left: -1rem;
   z-index: 4;
   height: 20rem;
   width: 20rem;
 }
 
 #Hover10 {
-  position: absolute;
+  position: fixed;
   top: 1.6rem;
-  right: 30.4rem;
+  left: 2.55rem;
   z-index: 5;
   height: 11.1rem;
   width: 11.1rem;
@@ -271,4 +364,46 @@ body {
 
 #Hover8:hover ~ #Pumpkin {
   animation-play-state: running;
+}
+#Hover10:hover ~ #Pumpkin {
+  animation-play-state: running;
+}
+
+#Hover9:hover ~ #Pumpkin2 {
+  animation-play-state: running;
+}
+#Hover10:hover ~ #Pumpkin2 {
+  animation-play-state: running;
+}
+#Hover6:hover ~ h1 {
+  animation-play-state: running;
+}
+#Hover10:hover ~ h1 {
+  animation-play-state: running;
+}
+#Hover7:hover ~ h2 {
+  animation-play-state: running;
+}
+#Hover10:hover ~ h2 {
+  animation-play-state: running;
+}
+#Hover2:hover ~ #Bat {
+  animation-play-state: running;
+}
+#Hover10:hover ~ #Bat {
+  animation-play-state: running;
+}
+#Hover5:hover ~ #Bat2 {
+  animation-play-state: running;
+}
+#Hover10:hover ~ #Bat2 {
+  animation-play-state: running;
+}
+#Hover10:hover ~ #Moon {
+  filter: brightness(1.5);
+}
+#Container {
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
 }
