@@ -487,21 +487,23 @@ h5 {
 /*Font matches halloween theme*/
 #Attributions {
   position: fixed;
-  font-family: Are You Serious;
+  font-family: Henny Penny;
   font-size: 2rem;
-  right: 1.5rem;
-  top: 0.5rem;
+  right: 1rem;
+  top: 0;
   color: white;
   z-index: 2;
+  display: block;
 }
 #Attributions2 {
   position: fixed;
-  font-family: Are You Serious;
+  font-family: Henny Penny;
   font-size: 2rem;
-  right: 1.5rem;
-  top: 0.5rem;
+  right: 1rem;
+  top: 0;
   color: white;
   z-index: 1;
+  display: block;
 }
 /*using display:none over opacity because even with 0 opacity, the hitbox still covers other elements, while display:none make the hitbox and visual completely disappear.
 Color is for visual clarity over other elements */
