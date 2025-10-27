@@ -1,19 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Are+You+Serious&family=Butcherman&family=Henny+Penny&display=swap");
+/*For the style of this project, I used halloween themed visual elements and colors such as purple and orange. The animations are based on how these visual elements (ghost, bat, pumpkin) would often act as commonly portrayed in media.*/
+
+@import url("https://fonts.googleapis.com/css2?family=Are+You+Serious&family=Butcherman&family=Henny+Penny&display=swap"); /*Using font that fit the halloween theme of my project*/
 #Character {
-  position: fixed;
-  bottom: 0%;
+  position: fixed; /*using position: fixed allows me to move image around freely based on what I eye estimation. This is good for my project as it is a digital artwork that fits on 1 screen and doesn't require any structure like a website or media player. Using position: fixed allows me to more easily create a composition based on my own eyetest of how it looks.*/
+  bottom: 0%; /*These positions put the character at the center of the screen horizontally and bottom vertically*/
   left: 30%;
   display: block;
   width: 40%;
 }
 
 body {
-  background-color: #3a1f42;
+  background-color: #3a1f42; /* I could not figure out a way to create a transparent background (on time) for my video elements, I matched the background color of body and video to create an illusion of a singular background. If I had time to redo this, I would use a script that changes the source of image after a delay*/
   cursor: url("assets/Cursor2.png"), auto;
 }
-body::-webkit-scrollbar {
-  display: none;
-}
+
+/* The "#HoverNumber" elements are created to be placed over the visual elements. The z-index: ensures that the elements are placed on top, while the opacity of the hitbox is set to 0 to hide them*/
 #Hover1 {
   position: fixed;
   left: 35.5%;
@@ -30,22 +31,23 @@ body::-webkit-scrollbar {
   position: fixed;
   bottom: 30%;
   left: 3%;
-  animation-name: Ghost;
-  animation-duration: 0.8s;
-  animation-iteration-count: infinite;
+  animation-name: Ghost; /* This sets the target name for this element later when animation keyframes are added to it*/
+  animation-duration: 0.8s; /* This is the total duration of the animation*/
+  animation-iteration-count: infinite; /*This loops the animation infinitely */
   z-index: 2;
-  opacity: 0;
+  opacity: 0; /*This makes the object invisible*/
 }
 
 @keyframes Ghost {
+  /*Keyframes move the object based on percentage of animation-duration*/
   0% {
-    transform: translateX(0) rotateY(0);
+    transform: translateX(0); /*Animation starts in default position*/
   }
   50% {
-    transform: translateX(15rem);
+    transform: translateX(15rem); /* moves 15rem to the right*/
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0); /* moves back to start*/
   }
 }
 #Bat {
@@ -55,15 +57,15 @@ body::-webkit-scrollbar {
   width: 30rem;
   height: 30rem;
   z-index: -1;
-  transform: rotate(50deg);
+  transform: rotate(50deg); /* This rotates my image by a set degree*/
   animation-name: Bat;
   animation-duration: 0.4s;
   animation-iteration-count: infinite;
-  animation-play-state: paused;
+  animation-play-state: paused; /* This will make the animation pause until I use a hover function later to play it*/
 }
 @keyframes Bat {
   0.01% {
-    transform: scale(1) rotate(50deg);
+    transform: scale(1) rotate(50deg); /* I need to keep stating the rotation degree is 50deg, or else animation will set it to default rotation*/
   }
   50% {
     transform: scale(1.2) rotate(50deg);
@@ -119,7 +121,7 @@ body::-webkit-scrollbar {
     transform: translateX(0) rotateY(180deg);
   }
   50% {
-    transform: translateX(-15rem) rotateY(180deg);
+    transform: translateX(-15rem) rotateY(180deg); /*-15rem moves element to the left, rotateY180  is to flip the image horizontally*/
   }
   100% {
     transform: translateX(0) rotateY(180deg);
@@ -135,6 +137,9 @@ body::-webkit-scrollbar {
   bottom: 0rem;
   background-color: rgba(255, 166, 0, 0);
 }
+
+/* The #HoverNumber:hover ~ "element" allows me to have the hovered element puppet a different element when it is hovered over*/
+
 #Hover3:hover ~ #Ghost {
   opacity: 1;
   transition: 0.4s ease-in-out;
@@ -153,10 +158,10 @@ body::-webkit-scrollbar {
   bottom: 0rem;
   background-color: rgba(255, 166, 0, 0);
 }
-
+/*This changes the opacity of ghost element from 0 to 1 when trigger is hovered over. Animation is based on idea of ghosts being invisible and revealing itself to jumpscare the audience*/
 #Hover4:hover ~ #Ghost2 {
   opacity: 1;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out; /*This is a transition effect that slowly fades in element in 0.4s*/
 }
 #Hover10:hover ~ #Ghost2 {
   opacity: 1;
@@ -171,13 +176,16 @@ h1 {
   font-family: Butcherman;
   transform: rotate(35deg);
   color: orange;
+  /*Using text-shadow in this way allows me to create essentially an outline for my text element. This is for visual aesthetic reasons*/
   text-shadow: -0.5rem -0.5rem 0 #000, 0.5rem -0.5rem 0 #000,
     -0.5rem 0.5rem 0 #000, 0.5rem 0.5rem 0 #000;
+
   animation-name: h1;
   animation-duration: 0.4s;
   animation-iteration-count: infinite;
   animation-play-state: paused;
 }
+/*Animation idea is the text giving a cute nod when hovered over*/
 @keyframes h1 {
   0.1% {
     transform: rotate(25deg);
@@ -229,9 +237,10 @@ h2 {
   animation-iteration-count: infinite;
   animation-play-state: paused;
 }
+/*Animation of pumpkin is based idea of it tricking and laughing at people*/
 @keyframes Pumpkin {
   0.1% {
-    transform: translate(38rem, -30rem) rotate(-30deg);
+    transform: translate(38rem, -30rem) rotate(-30deg); /*This transform line means to translate(horizontally, vertically) and rotate*/
   }
   50% {
     transform: translate(38rem, -30rem) rotate(30deg);
@@ -283,7 +292,7 @@ h2 {
     transform: scale(1) rotate(-20deg);
   }
   50% {
-    transform: scale(1.2) rotate(-20deg);
+    transform: scale(1.2) rotate(-20deg); /*using a looping scale up and down transform creates a bouncy effect for my bat element. This combined with flapping wings create an effect that make bat seem like its flying*/
   }
   100% {
     transform: scale(1) rotate(-20deg);
@@ -341,6 +350,7 @@ h2 {
   bottom: 16.1rem;
   background-color: rgba(255, 166, 0, 0);
 }
+/*The idea behind the moon is that, creatures at night are most active when the moon is full. To show this idea, when the moon is hovered over, every single animation will start playing at once*/
 #Moon {
   position: fixed;
   top: -1rem;
@@ -358,9 +368,10 @@ h2 {
   height: 11.1rem;
   width: 11.1rem;
   background-color: rgba(255, 166, 0, 0);
-  border-radius: 50%;
+  border-radius: 50%; /*Moon is round, so I make div round to match it*/
 }
-
+/*This will make the #start be in front of the entire digital artwork and fill the entire screen with a translucent orange color.
+Text and color fit the halloween theme*/
 #start {
   position: fixed;
   z-index: 8;
@@ -388,19 +399,7 @@ h5 {
   font-size: 3rem;
 }
 
-#A {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  position: fixed;
-  font-size: 2rem;
-  font-family: Henny Penny;
-  background-color: #000;
-  z-index: 11;
-  width: 100vw;
-  height: 100vh;
-}
+/* These effects allow me to change the specified pause states of my elements into a running state. This essentially means that the animation will only play if mouse is hovered over the specific triggers*/
 #Hover8:hover ~ #Pumpkin {
   animation-play-state: running;
 }
@@ -438,9 +437,11 @@ h5 {
 #Hover10:hover ~ #Bat2 {
   animation-play-state: running;
 }
+/*This increases the brightness of my element when trigger is hovered over. I chose this effect because it is commonly portrayed the creatures at night are most active when full moon is at brightest*/
 #Hover10:hover ~ #Moon {
   filter: brightness(1.5);
 }
+/*This removes the mouse cursor when it enters the trigger zones. This is for aesthetic reasons as the mouse cursor doesn't belong in the overall artpiece*/
 #Hover10:hover {
   cursor: none;
 }
@@ -471,22 +472,60 @@ h5 {
 #Hover1:hover {
   cursor: none;
 }
+#Attributions:hover {
+  cursor: none;
+}
+#Attributions2:hover {
+  cursor: none;
+}
+/*This container makes it so that the elements does not move outside of viewport*/
 #Container {
   position: relative;
   min-height: 100vh;
   min-width: 100vw;
 }
-
+/*Font matches halloween theme*/
+#Attributions {
+  position: fixed;
+  font-family: Are You Serious;
+  font-size: 2rem;
+  right: 1rem;
+  top: 0;
+  color: white;
+  z-index: 2;
+}
+#Attributions2 {
+  position: fixed;
+  font-family: Are You Serious;
+  font-size: 2rem;
+  right: 1rem;
+  top: 0;
+  color: white;
+  z-index: 1;
+}
+/*using display:none over opacity because even with 0 opacity, the hitbox still covers other elements, while display:none make the hitbox and visual completely disappear.
+Color is for visual clarity over other elements */
 footer {
-  position: relative;
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  left: 14rem;
   z-index: 11;
-  color: #000000;
+  color: #2679ff;
   font-size: 1.5rem;
-  background-color: rgba(255, 166, 0, 0);
+  background-color: rgba(17, 0, 255, 0);
   text-align: center;
   width: 100vw;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+/*This changes the color of the hyperlink*/
 a {
   color: rgb(255, 0, 0);
 }
+
+/*Reflection:
+I believe that using position: absolute for this project was a big mistake. Even though it made things easy and looked good on my display, I did not consider how it may look on other displays. As it was very late into the process, I bandaid fixed the issue by changing display to "fixed" which solved the major issues. however, this is not ideal either and was only effective because my project was only 1 viewport in size
+
+I believe that the animations and layout that I used for my elements were effective in what I was trying to do for my project.
+
+Things such as matching the body and video background colors were bandaid fixes and likely have better solutions to them. This issue is very apparent on smaller sized  viewports*/

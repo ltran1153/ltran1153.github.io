@@ -9,12 +9,17 @@
     <title>Assignment 3</title>
   </head>
   <body>
-    <div id="Container">
+    <div id="Container"> <!--This div acts as a canvas for the artpiece. (Meaning nothing can be outside the container)-->
+      <!--This div will appear on over the artpiece at the start. This acts as a warning that this artpiece will contain sound, as well as forcing the user to click the browser at least once.
+      I added this here, because I had an issue where the videos and audio won't start playing until I click at least once. So to ensure that no one else had this problem, I added this as a sneaky and project appropriate way to solve the issue-->
       <div id="start">
         <h3>Warning</h3>
         <h4>This Project Contains Sound</h4>
         <h5>Click Anywhere To Start!</h5>
       </div>
+      <!--All of the divs below act as an invisible trigger layered on top of the images to start animating them. I added these because the boxes of the images and videos were too big, therefore these divs are here so the trigger size is more appropriate (for example: the container of the videos took a lot of space, and some of that included the purple background which logically should not trigger an animation)  -->
+      <div id="Attributions">A</div>
+      <div id="Attributions2">A</div>
       <div id="Hover1"></div>
       <div id="Hover2"></div>
       <div id="Hover3"></div>
@@ -25,9 +30,12 @@
       <div id="Hover8"></div>
       <div id="Hover9"></div>
       <div id="Hover10"></div>
+      <!--These text act as a visual aesthetic of the project-->
       <h1>Spooky</h1>
       <h2>Spooky</h2>
+      <!--The videos and images below are the visual assets of my project. I used video format for the character dance and bat wings flapping, since they required multiple frames, while the image assets can all be animated in css.-->
       <img id="Ghost" src="assets/Ghost.png" alt="Ghost" />
+      <!--I am using loop for the videos and set it up in a way that the movement of the character and bat loop around seemlessly-->
       <video id="Character" controls loop>
         <source src="assets/Character.mp4" type="video/mp4" />
       </video>
@@ -43,6 +51,7 @@
       <video id="Bat2" controls loop>
         <source src="assets/Bat.mp4" type="video/mp4" />
       </video>
+      <!--These audio clips will play based on whatever visual element the user hovers over. The audio supports the type of visual element (ghost has ghost sound, bat has bat sound, etc...)-->
       <audio id="Batsong" controls>
         <source src="assets/Batsong.mp3" type="audio/mpeg" />
       </audio>
@@ -58,13 +67,18 @@
       <audio id="Spookysong" controls>
         <source src="assets/Spookysong.mp3" type="audio/mpeg" />
       </audio>
-    </div>
-    <footer><p>Attributions:</p>
-        <p><a href="https://pixabay.com/music/scary-childrens-tunes-halloween-kids-background-music-417482/">Halloween Kids Background Music</a> by SigmaMusicArt, Content License</p>
-        <p><a href=https://pixabay.com/sound-effects/cute-little-baby-bat-189968/>Cute Little Baby Bat</a> by AlesiaDavina, Content License</p>
-        <p><a href=https://pixabay.com/sound-effects/ghost-horror-sound-382709/>Ghost Horror Sound</a> by DRAGON-STUDIO, Content License</p>
-        <p><a href=https://pixabay.com/sound-effects/cartoon-laugh-6457/>Cartoon Laugh</a> by JohnsonBrandEditing (Freesound), Content License</p>
-        <p><a href=https://pixabay.com/sound-effects/cartoon-blinking-372481/>Cartoon Blinking</a> by DRAGON-STUDIO, Content License</p>
+      <!--footer, crediting the artist of my audio clips and linking to the original website, as well as what type of license it is under -->
+          <footer><p>Attributions:</p>
+        <p><a target="_blank" href="https://pixabay.com/music/scary-childrens-tunes-halloween-kids-background-music-417482/">Halloween Kids Background Music</a> by SigmaMusicArt, Content License</p>
+        <p><a target="_blank" href=https://pixabay.com/sound-effects/cute-little-baby-bat-189968/>Cute Little Baby Bat</a> by AlesiaDavina, Content License</p>
+        <p><a target="_blank" href=https://pixabay.com/sound-effects/ghost-horror-sound-382709/>Ghost Horror Sound</a> by DRAGON-STUDIO, Content License</p>
+        <p><a target="_blank" href=https://pixabay.com/sound-effects/cartoon-laugh-6457/>Cartoon Laugh</a> by JohnsonBrandEditing (Freesound), Content License</p>
+        <p><a target="_blank" href=https://pixabay.com/sound-effects/cartoon-blinking-372481/>Cartoon Blinking</a> by DRAGON-STUDIO, Content License</p>
 </footer>
+    </div>
   </body>
 </html>
+
+<!--Reflection:
+Reflecting on how I implemented my project, I thought that I found good solutions for the interactivity problems that this project might have. Such as adding a warning screen that forces the user to click at least once, as well as the "#Hover" boxes that act as a more appriate trigger than just the default videos and images.
+One thing I did not have foresight over was the way I layed out the elements in html. I thought it was unecessary because I was using position:absolute to layout everything. However, this did not account for responsiveness. In the future, it would be more appropriate to layout my elements properly in html, and using flex-grid + position: relative to move things around-->
